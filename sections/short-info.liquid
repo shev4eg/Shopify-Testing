@@ -10,10 +10,10 @@
 	<div class="short-info-inner" {% if section.settings.background_color %}style="background-color: {{ section.settings.background_color }};"{% endif %}>
 		<div class="container">
 			{% if section.settings.section_header %}
-				<h1 {% if section.settings.section_header_color %}style="color:{{ section.settings.section_header_color }}"{% endif %}>{{ section.settings.section_header }}</h1>
+				<h1 {% if section.settings.section_header_color != blank %}style="color:{{ section.settings.section_header_color }}"{% endif %}>{{ section.settings.section_header }}</h1>
 			{% endif %}
 			{% if section.settings.section_text %}
-				<div class="short-info-text" {% if section.settings.section_text_color %}style="color:{{ section.settings.section_text_color }}"{% endif %}>{{ section.settings.section_text }}</div>
+				<div class="short-info-text" {% if section.settings.section_text_color != blank %}style="color:{{ section.settings.section_text_color }}"{% endif %}>{{ section.settings.section_text }}</div>
 			{% endif %}
 			{% if blockSize > 0 %}
 				<div class="short-info-box">
@@ -34,11 +34,11 @@
 							{% endif %}
 
 							{% if block.settings.block_title != blank %}
-								<h3 {% if block.settings.block_title_color %}style="color:{{ block.settings.block_title_color }}"{% endif %}>{{ block.settings.block_title }}</h3>
+								<h3 {% if block.settings.block_title_color != blank %}style="color:{{ block.settings.block_title_color }}"{% endif %}>{{ block.settings.block_title }}</h3>
 							{% endif %}
 
 							{% if block.settings.block_text != blank %}
-								<p {% if block.settings.block_text_color %}style="color:{{ block.settings.block_text_color }}"{% endif %}>{{ block.settings.block_text }}</p>
+								<p {% if block.settings.block_text_color != blank %}style="color:{{ block.settings.block_text_color }}"{% endif %}>{{ block.settings.block_text }}</p>
 							{% endif %}
 
 						</div>
