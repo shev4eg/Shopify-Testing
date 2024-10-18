@@ -33,11 +33,23 @@
             "block_text": "Container voll? Rufen Sie uns an oder schicken Sie eine Mail und wir holen die Tennisbälle innert 14 Tagen bei Ihnen ab.",
             "block_text_color": "#000"
           }
+        },
+        "content_block_acnYnH": {
+          "type": "content_block",
+          "settings": {
+            "block_image": "shopify://shop_images/Image3.png",
+            "block_image_mob": "shopify://shop_images/Image31.png",
+            "block_title": "und recyceln",
+            "block_title_color": "#000",
+            "block_text": "Wir sortieren die Bälle gemeinsam mit einer Schweizer Stiftung fürs Recycling.",
+            "block_text_color": "#000"
+          }
         }
       },
       "block_order": [
         "content_block_zhenYq",
-        "content_block_qqq74K"
+        "content_block_qqq74K",
+        "content_block_acnYnH"
       ],
       "settings": {
         "background_color": "#fbf638",
