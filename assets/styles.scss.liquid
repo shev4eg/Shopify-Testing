@@ -1,11 +1,92 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+}
+
 body {
 	font-family: 'Gibson';
 	line-height: normal;
 	letter-spacing: 0;
+  color: #000;
+}
+
+p {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.36px;
+  @media only screen and (max-width: 1800px) {
+    font-size: 28px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
 }
 
 .container {
 	max-width: 1718px;
 	width: 100%;
   margin: 0 auto;
+  @media only screen and (max-width: 1800px) {
+    max-width: 100%;
+    padding: 0 28px;
+  }
+  @media only screen and (max-width: 767px) {
+    padding: 0 15px;
+  }
+}
+
+h1, .h1 {
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+  @media only screen and (max-width: 1800px) {
+    font-size: 48px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 32px;
+  }
+  @media only screen and (max-width: 767px) {
+    font-size: 24px;
+  }
+}
+
+h2, .h2 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+  @media only screen and (max-width: 1800px) {
+    font-size: 38px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 28px;
+  }
+  @media only screen and (max-width: 767px) {
+    font-size: 20px;
+  }
+}
+
+h3, .h3 {
+  color: #000;
+  text-align: center;
+  font-family: "Permanent Marker";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @media only screen and (max-width: 1800px) {
+    font-size: 36px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 28px;
+  }
+}
+
+.heading_and_text {
+  padding: 148px 0;
 }

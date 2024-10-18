@@ -1,15 +1,59 @@
 <link rel="stylesheet preload prefetch" href="{{ 'short-info.scss.css?enable_css_minification=1' | asset_url }}" as="style" type="text/css" crossorigin="anonymous">
 
-<div class="short-info">
-	<div class="container">
-		{% if section_header %}
-			<h1>{{ section_header }}</h1>
-		{% endif %}
-		{% if section_text %}
-			<div class="short-info-text">{{ section_text }}</div>
-		{% endif %}
+{% assign blockSize = section.blocks | size  %}
+
+<section class="short-info">
+	{% if section.settings.top_decoration %}
+		<div class="short-info-decor" {% if section.settings.background_color %}style="background: linear-gradient(to top right, {{ section.settings.background_color }} 50%, transparent 50%);"{% endif %}></div>
+	{% endif %}
+
+	<div class="short-info-inner" {% if section.settings.background_color %}style="background-color: {{ section.settings.background_color }};"{% endif %}>
+		<div class="container">
+			{% if section.settings.section_header %}
+				<h1 {% if section.settings.section_header_color %}style="color:{{ section.settings.section_header_color }}"{% endif %}>{{ section.settings.section_header }}</h1>
+			{% endif %}
+			{% if section.settings.section_text %}
+				<div class="short-info-text" {% if section.settings.section_text_color %}style="color:{{ section.settings.section_text_color }}"{% endif %}>{{ section.settings.section_text }}</div>
+			{% endif %}
+			{% if blockSize > 0 %}
+				<div class="short-info-box">
+
+					{% for block in section.blocks %}
+
+						<div class="short-info-item">
+
+							{% if block.settings.block_image != blank %}
+								<div class="short-info-image">
+
+									<picture>
+										<source media="(min-width: 768px)" srcset="{{ block.settings.block_image | image_url }}">
+										<source media="(max-width: 767px)" srcset="{{ block.settings.block_image_mob | image_url }}">
+										<img src="{{ block.settings.block_image | image_url }}" alt="{{ block.settings.block_title }}">
+									</picture>
+								</div>
+							{% endif %}
+
+							{% if block.settings.block_title != blank %}
+								<h3 {% if block.settings.block_title_color %}style="color:{{ block.settings.block_title_color }}"{% endif %}>{{ block.settings.block_title }}</h3>
+							{% endif %}
+
+							{% if block.settings.block_text != blank %}
+								<p {% if block.settings.block_text_color %}style="color:{{ block.settings.block_text_color }}"{% endif %}>{{ block.settings.block_text }}</p>
+							{% endif %}
+
+						</div>
+
+					{% endfor %}
+
+				</div>
+			{% endif %}
+		</div>
 	</div>
-</div>
+
+	{% if section.settings.bottom_decoration %}
+		<div class="short-info-decor" {% if section.settings.background_color %}style="background: linear-gradient(to top right, transparent 50%, {{ section.settings.background_color }} 50%);"{% endif %}></div>
+	{% endif %}
+</section>
 
 {% schema %}
 {
@@ -37,9 +81,19 @@
       "label": "Заголовок секції"
     },
     {
+      "type": "color",
+      "id": "section_header_color",
+      "label": "Колір заголовку секції"
+    },
+    {
       "type": "textarea",
       "id": "section_text",
       "label": "Текст секції (під заголовком)"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Колір тексту (підзаголовку) секції"
     }
   ],
   "blocks": [
@@ -53,14 +107,31 @@
           "label": "Картинка"
         },
         {
+          "type": "image_picker",
+          "id": "block_image_mob",
+          "label": "Картинка для мобільного"
+        },
+        {
           "type": "text",
           "id": "block_title",
           "label": "Заголовок блоку"
         },
         {
+          "type": "color",
+          "id": "block_title_color",
+          "label": "Колір заголовку блоку",
+          "default": "#000"
+        },
+        {
           "type": "textarea",
           "id": "block_text",
           "label": "Текст блоку"
+        },
+        {
+          "type": "color",
+          "id": "block_text_color",
+          "label": "Колір тексту блоку",
+          "default": "#000"
         }
       ]
     }
