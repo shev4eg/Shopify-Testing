@@ -11,10 +11,38 @@
   "sections": {
     "short_info_w34Bpp": {
       "type": "short-info",
+      "blocks": {
+        "content_block_zhenYq": {
+          "type": "content_block",
+          "settings": {
+            "block_image": "shopify://shop_images/Image.png",
+            "block_image_mob": "shopify://shop_images/Image11.png",
+            "block_title": "Sie sammeln",
+            "block_title_color": "#000",
+            "block_text": "Sie stellen die Sammelboxen an ihren Tennisplätzen auf. Spieler*innen können die Bälle selbst darin entsorgen.",
+            "block_text_color": "#000"
+          }
+        },
+        "content_block_qqq74K": {
+          "type": "content_block",
+          "settings": {
+            "block_image": "shopify://shop_images/Image2.png",
+            "block_image_mob": "shopify://shop_images/Image22.png",
+            "block_title": "wir holen ab",
+            "block_title_color": "#000",
+            "block_text": "Container voll? Rufen Sie uns an oder schicken Sie eine Mail und wir holen die Tennisbälle innert 14 Tagen bei Ihnen ab.",
+            "block_text_color": "#000"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_zhenYq",
+        "content_block_qqq74K"
+      ],
       "settings": {
         "background_color": "#fbf638",
         "top_decoration": false,
-        "bottom_decoration": false,
+        "bottom_decoration": true,
         "section_header": "So funktioniert’s",
         "section_header_color": "#000000",
         "section_text": "Tennisclubs in der gesamten Schweiz können sich für unser Recycling anmelden. Wir liefern Ihnen daraufhin Sammelboxen und Container je nach Bedarf – und schon kann es losgehen! Ihre Mitglieder werden begeistert sein.",
