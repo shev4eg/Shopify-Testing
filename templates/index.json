@@ -60,9 +60,22 @@
         "section_text": "Tennisclubs in der gesamten Schweiz können sich für unser Recycling anmelden. Wir liefern Ihnen daraufhin Sammelboxen und Container je nach Bedarf – und schon kann es losgehen! Ihre Mitglieder werden begeistert sein.",
         "section_text_color": "#000000"
       }
+    },
+    "short_info_YxWEmU": {
+      "type": "short-info",
+      "settings": {
+        "background_color": "#ffffff",
+        "top_decoration": false,
+        "bottom_decoration": false,
+        "section_header": "Gemischtes Doppel: Unsere Boxen und Container",
+        "section_header_color": "",
+        "section_text": "Für die Sammlung gibt es Sammelboxen und Container. Die Sammelboxen können Sie gut sichtbar am Spielfeldrand aufstellen und regelmässig in den Container entleeren. Sobald der Container voll ist, kommen wir vorbei.",
+        "section_text_color": ""
+      }
     }
   },
   "order": [
-    "short_info_w34Bpp"
+    "short_info_w34Bpp",
+    "short_info_YxWEmU"
   ]
 }
