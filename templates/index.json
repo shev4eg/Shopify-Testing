@@ -12,11 +12,13 @@
     "short_info_w34Bpp": {
       "type": "short-info",
       "settings": {
-        "background_color": "#FBF638",
+        "background_color": "#fbf638",
         "top_decoration": false,
         "bottom_decoration": false,
-        "section_header": "So funktioniert’s1",
-        "section_text": "Tennisclubs in der gesamten Schweiz können sich für unser Recycling anmelden. Wir liefern Ihnen daraufhin Sammelboxen und Container je nach Bedarf – und schon kann es losgehen! Ihre Mitglieder werden begeistert sein."
+        "section_header": "So funktioniert’s",
+        "section_header_color": "#7e0f0f",
+        "section_text": "Tennisclubs in der gesamten Schweiz können sich für unser Recycling anmelden. Wir liefern Ihnen daraufhin Sammelboxen und Container je nach Bedarf – und schon kann es losgehen! Ihre Mitglieder werden begeistert sein.",
+        "section_text_color": "#334fb4"
       }
     }
   },
