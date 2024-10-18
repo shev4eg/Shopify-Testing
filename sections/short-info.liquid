@@ -1,0 +1,76 @@
+<link rel="stylesheet preload prefetch" href="{{ 'short-info.scss.css?enable_css_minification=1' | asset_url }}" as="style" type="text/css" crossorigin="anonymous">
+
+<div class="short-info">
+	<div class="container">
+		{% if section_header %}
+			<h1>{{ section_header }}</h1>
+		{% endif %}
+		{% if section_text %}
+			<div class="short-info-text">{{ section_text }}</div>
+		{% endif %}
+	</div>
+</div>
+
+{% schema %}
+{
+  "name": "Short Information Section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Колір фону секції",
+      "default": "#FBF638"
+    },
+    {
+      "type": "checkbox",
+      "id": "top_decoration",
+      "label": "Увімкнути декорації зверху"
+    },
+    {
+      "type": "checkbox",
+      "id": "bottom_decoration",
+      "label": "Увімкнути декорації знизу"
+    },
+    {
+      "type": "text",
+      "id": "section_header",
+      "label": "Заголовок секції"
+    },
+    {
+      "type": "textarea",
+      "id": "section_text",
+      "label": "Текст секції (під заголовком)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Блок",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Картинка"
+        },
+        {
+          "type": "text",
+          "id": "block_title",
+          "label": "Заголовок блоку"
+        },
+        {
+          "type": "textarea",
+          "id": "block_text",
+          "label": "Текст блоку"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Short Info Section",
+      "category": "Custom"
+    }
+  ],
+  "max_blocks": 3
+}
+{% endschema %}

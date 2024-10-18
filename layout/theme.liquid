@@ -253,9 +253,84 @@
           font-size: 1.6rem;
         }
       }
+
+      {% comment %}fonts{% endcomment %}
+
+      @font-face {
+      font-family: 'Gibson';
+      src: local('Gibson SemiBold Italic'), local('Gibson-SemiBoldItalic'),
+      url('{{ 'Gibson-SemiBoldItalic.woff2' | asset_url }}') format('woff2'),
+      url('{{ 'Gibson-SemiBoldItalic.woff' | asset_url }}') format('woff');
+      font-weight: 600;
+      font-style: italic;
+      }
+
+      @font-face {
+      font-family: 'Gibson';
+      src: local('Gibson Light'), local('Gibson-Light'),
+      url('{{ 'Gibson-Light.woff2' | asset_url }}') format('woff2'),
+      url('{{ 'Gibson-Light.woff' | asset_url }}') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      }
+
+      @font-face {
+      font-family: 'Gibson';
+      src: local('Gibson Light Italic'), local('Gibson-LightItalic'),
+      url('{{ 'Gibson-LightItalic.woff2' | asset_url }}') format('woff2'),
+      url('{{ 'Gibson-LightItalic.woff' | asset_url }}') format('woff');
+      font-weight: 300;
+      font-style: italic;
+      }
+
+      @font-face {
+      font-family: 'Gibson';
+      src: local('Gibson Italic'), local('Gibson-Italic'),
+      url('{{ 'Gibson-Italic.woff2' | asset_url }}') format('woff2'),
+      url('{{ 'Gibson-Italic.woff' | asset_url }}') format('woff');
+      font-weight: normal;
+      font-style: italic;
+      }
+
+      @font-face {
+      font-family: 'Gibson';
+      src: local('Gibson Bold'), local('Gibson-Bold'),
+      url('{{ 'Gibson-Bold.woff2' | asset_url }}') format('woff2'),
+      url('{{ 'Gibson-Bold.woff' | asset_url }}') format('woff');
+      font-weight: bold;
+      font-style: normal;
+      }
+
+      @font-face {
+      font-family: 'Gibson';
+      src: local('Gibson'),
+      url('{{ 'Gibson.woff2' | asset_url }}') format('woff2'),
+      url('{{ 'Gibson.woff' | asset_url }}') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      }
+
+      @font-face {
+      font-family: 'Gibson';
+      src: local('Gibson Bold Italic'), local('Gibson-BoldItalic'),
+      url('{{ 'Gibson-BoldItalic.woff2' | asset_url }}') format('woff2'),
+      url('{{ 'Gibson-BoldItalic.woff' | asset_url }}') format('woff');
+      font-weight: bold;
+      font-style: italic;
+      }
+
+      @font-face {
+      font-family: 'Gibson';
+      src: local('Gibson SemiBold'), local('Gibson-SemiBold'),
+      url('{{ 'Gibson-SemiBold.woff2' | asset_url }}') format('woff2'),
+      url('{{ 'Gibson-SemiBold.woff' | asset_url }}') format('woff');
+      font-weight: 600;
+      font-style: normal;
+      }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    <link rel="stylesheet preload prefetch" href="{{ 'styles.scss.css?enable_css_minification=1' | asset_url }}" as="style" type="text/css" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
