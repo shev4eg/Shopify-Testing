@@ -4,7 +4,7 @@
 
 <section class="short-info">
 	{% if section.settings.top_decoration %}
-		<div class="short-info-decor" {% if section.settings.background_color %}style="background: linear-gradient(to top right, {{ section.settings.background_color }} 50%, transparent 50%);"{% endif %}></div>
+		<div class="short-info-decor short-info-decor--top" {% if section.settings.background_color %}style="background: linear-gradient(to top right, {{ section.settings.background_color }} 50%, transparent 50%);"{% endif %}></div>
 	{% endif %}
 
 	<div class="short-info-inner" {% if section.settings.background_color %}style="background-color: {{ section.settings.background_color }};"{% endif %}>
@@ -51,7 +51,7 @@
 	</div>
 
 	{% if section.settings.bottom_decoration %}
-		<div class="short-info-decor" {% if section.settings.background_color %}style="background: linear-gradient(to top right, transparent 50%, {{ section.settings.background_color }} 50%);"{% endif %}></div>
+		<div class="short-info-decor short-info-decor--bottom" {% if section.settings.background_color %}style="background: linear-gradient(to top right, transparent 50%, {{ section.settings.background_color }} 50%);"{% endif %}></div>
 	{% endif %}
 </section>
 

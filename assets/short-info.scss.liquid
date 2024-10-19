@@ -1,29 +1,34 @@
 .short-info {
   line-height: 1;
   font-size: 0;
-	h1,
-	.short-info-text {
-		max-width: 1540px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    h1, .short-info-text {
+      max-width: 1540px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
 	}
 	h1 {
-    margin-bottom: 60px;
-		max-width: 868px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    @media only screen and (max-width: 1800px) {
-      margin-bottom: 40px;
-    }
-    @media only screen and (max-width: 1200px) {
-      margin-bottom: 32px;
-    }
-    @media only screen and (max-width: 767px) {
-      margin-bottom: 16px;
-    }
+      margin-bottom: 60px;
+          max-width: 868px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      @media only screen and (max-width: 1800px) {
+        margin-bottom: 40px;
+      }
+      @media only screen and (max-width: 1200px) {
+        margin-bottom: 32px;
+      }
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 16px;
+      }
 	}
+}
+
+.short-info:has(.short-info-decor--bottom) {
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 47px;
+  }
 }
 
 .short-info:has(.short-info-decor) .short-info-inner {
